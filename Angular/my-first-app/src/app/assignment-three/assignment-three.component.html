@@ -1,0 +1,3 @@
+<button (click)="toggleDisplay($event)" class="btn btn-primary my-4">Display Details</button>
+<p *ngIf="isDisplayed">Secret Password = Tuna</p>
+<p *ngFor="let click of mouseClicks" [ngClass]="{indexStyle: click > 4}">{{ click }}</p>

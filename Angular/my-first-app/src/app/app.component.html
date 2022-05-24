@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>I'am in the app component !</h3>
+      <hr>
+      <app-servers></app-servers>
+      <!-- <div app-servers></div> -->
+      <!-- <div class="app-servers"></div> -->
+      <h3>Assignment 1</h3>
+      <app-warningAlert></app-warningAlert>
+      <app-successAlert></app-successAlert>
+      <hr class="my-5">
+      <h3>Assignment 2</h3>
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="userName" (input)="onUpdateUserName($event)">
+      <p>{{ userName }}</p>
+      <button class="btn btn-primary my-4" [disabled]="!nameIsEmpty" (click)="userName = ''">Reset</button>
+      <hr>
+      <h3>Assignment 3</h3>
+      <app-assignment-three></app-assignment-three>
+    </div>
+  </div>
+</div>
