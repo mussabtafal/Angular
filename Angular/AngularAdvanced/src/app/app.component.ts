@@ -24,5 +24,17 @@ onBlueprintAdded(blueprintData: {serverName: string, serverContent: string}) {
   });
 }
 
+onChangeFirst() {
+  if(this.serverElements[0].name === 'Changed!') {
+    this.serverElements[0].name = 'Test'
+  }else {
+    this.serverElements[0].name = 'Changed!';
+  }
+}
+
+onDeleteFirst() {
+  this.serverElements.splice(0,1);
+}
 
 }
+
