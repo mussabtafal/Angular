@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   @Output() intervalFired = new EventEmitter<number>();
+  @Output() resetFired = new EventEmitter<string>();
   interval;
   lastNumber = 0;
   constructor() { }
@@ -22,5 +23,10 @@ export class GameControlComponent implements OnInit {
 
   onPauseGame() {
     clearInterval(this.interval);
+  }
+
+  onResetGame() {
+    this.lastNumber = 0;
+    this.resetFired.emit('Game Has been reset')
   }
 }

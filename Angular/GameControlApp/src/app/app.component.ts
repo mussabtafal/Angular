@@ -17,4 +17,10 @@ export class AppComponent {
       this.oddNumbers.push(firedNumber);
     }
   }
+
+  onResetFired(resetMessage: string) {
+    console.log(resetMessage);
+    this.oddNumbers = [];
+    this.evenNumbers= [];
+  }
 }
