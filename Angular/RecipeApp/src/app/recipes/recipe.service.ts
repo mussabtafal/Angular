@@ -17,7 +17,7 @@ export class RecipeService
       new Ingredient('Onions', 3),
       new Ingredient('tomatoes', 1)
     ]),
-    new Recipe('burgers', 'A very simple burger sandwich', 'https://static01.nyt.com/images/2013/06/26/dining/26JPFLEX1/26JPFLEX1-articleLarge-v3.jpg', [
+    new Recipe('burgers', 'A very simple burger sandwich', 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1899&q=80', [
       new Ingredient('buns', 2),
       new Ingredient('Meat', 1)
     ]),
@@ -29,7 +29,13 @@ export class RecipeService
     return this.recipes.slice();
   }
 
+  getRecipe(i: number) {
+    return this.recipes[i]
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
       this.slService.addIngredients(ingredients);
   }
+
+
  }
