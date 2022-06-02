@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     //   }
     // )
     const customIntervalObservable = new Observable((observer: Observer<number>) => {
-      let count = 0
+      let count = 0 
       setInterval(() => {
         observer.next(count);
         if(count === 5) {
